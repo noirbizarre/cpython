@@ -388,7 +388,7 @@ Common commands: (see '--help-commands' for more)
         if DEBUG:
             self.announce("Distribution.parse_config_files():")
 
-        parser = ConfigParser()
+        parser = ConfigParser(interpolation=None)
         for filename in filenames:
             if DEBUG:
                 self.announce("  reading %s" % filename)
